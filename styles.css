@@ -38,11 +38,12 @@ select {
 }
 
 .mobile-page {
-  width: min(100%, 360px);
+  width: min(100%, 512px);
   min-height: 100vh;
   margin: 0 auto;
   overflow: hidden;
   background: #fff;
+  box-shadow: 0 0 0 1px rgba(76, 11, 49, 0.05);
 }
 
 .app-header {
@@ -316,7 +317,7 @@ select {
 
 .rail {
   display: grid;
-  grid-auto-columns: 290px;
+  grid-auto-columns: calc(100% - 86px);
   grid-auto-flow: column;
   gap: 12px;
   margin-right: -12px;
@@ -344,13 +345,14 @@ select {
 }
 
 .course-card.peek {
-  width: 145px;
+  width: 172px;
+  max-width: 100%;
 }
 
 .cover {
   position: relative;
   display: flex;
-  min-height: 116px;
+  min-height: clamp(116px, 30vw, 166px);
   align-items: flex-end;
   padding: 14px;
   overflow: hidden;
@@ -359,7 +361,7 @@ select {
 }
 
 .wide .cover {
-  min-height: 206px;
+  min-height: clamp(206px, 54vw, 278px);
 }
 
 .cover::before {
@@ -757,7 +759,7 @@ select {
 
 .help {
   position: fixed;
-  right: max(18px, calc((100vw - 360px) / 2 - 44px));
+  right: max(18px, calc((100vw - 512px) / 2 - 44px));
   bottom: 24px;
   z-index: 50;
   display: grid;
@@ -772,7 +774,7 @@ select {
   font-weight: 900;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 512px) {
   .mobile-page {
     width: 100%;
   }
