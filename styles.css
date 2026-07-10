@@ -1,14 +1,14 @@
 :root {
-  --blue: #1769f6;
-  --blue-dark: #0f4fc1;
-  --blue-soft: #eef4ff;
-  --purple: #7468ff;
-  --ink: #171b29;
-  --muted: #838a9a;
-  --line: #edf0f5;
-  --bg: #eef0f4;
+  --blue: #8f3f17;
+  --blue-dark: #51200d;
+  --blue-soft: #fff1e6;
+  --purple: #b12a58;
+  --ink: #24130d;
+  --muted: #93796d;
+  --line: #f0e4dc;
+  --bg: #efe8e1;
   --card: #ffffff;
-  --shadow: 0 8px 24px rgba(25, 42, 78, 0.12);
+  --shadow: 0 8px 24px rgba(81, 32, 13, 0.14);
 }
 
 * {
@@ -55,7 +55,7 @@ select {
   height: 38px;
   padding: 0 14px;
   background: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid #f1f3f7;
+  border-bottom: 1px solid #f4e9e0;
   backdrop-filter: blur(14px);
 }
 
@@ -99,7 +99,7 @@ select {
   position: relative;
   width: 16px;
   height: 14px;
-  border: 2px solid #202636;
+  border: 2px solid var(--ink);
   border-top: 0;
   border-radius: 2px;
 }
@@ -110,8 +110,8 @@ select {
   left: -3px;
   width: 8px;
   height: 7px;
-  border-top: 2px solid #202636;
-  border-left: 2px solid #202636;
+  border-top: 2px solid var(--ink);
+  border-left: 2px solid var(--ink);
   content: "";
 }
 
@@ -122,8 +122,8 @@ select {
   left: 1px;
   height: 3px;
   background:
-    radial-gradient(circle at 2px 1px, #202636 2px, transparent 2px),
-    radial-gradient(circle at 12px 1px, #202636 2px, transparent 2px);
+    radial-gradient(circle at 2px 1px, var(--ink) 2px, transparent 2px),
+    radial-gradient(circle at 12px 1px, var(--ink) 2px, transparent 2px);
   content: "";
 }
 
@@ -140,7 +140,7 @@ select {
 .menu span {
   display: block;
   height: 2px;
-  background: #202636;
+  background: var(--ink);
   border-radius: 99px;
 }
 
@@ -150,7 +150,7 @@ select {
   padding: 26px 16px 0;
   overflow: hidden;
   color: #fff;
-  background: var(--blue);
+  background: linear-gradient(135deg, #a54c1c 0%, #7b2f13 52%, #4a1d0c 100%);
 }
 
 .hero::before {
@@ -158,7 +158,7 @@ select {
   inset: 0;
   background:
     radial-gradient(circle at 24% 30%, rgba(255, 255, 255, 0.18), transparent 24%),
-    radial-gradient(circle at 70% 48%, rgba(16, 50, 130, 0.32), transparent 32%);
+    radial-gradient(circle at 72% 46%, rgba(255, 150, 65, 0.28), transparent 32%);
   content: "";
 }
 
@@ -189,7 +189,7 @@ select {
   min-height: 28px;
   padding: 0 10px;
   color: rgba(255, 255, 255, 0.72);
-  background: rgba(8, 41, 118, 0.36);
+  background: rgba(62, 22, 7, 0.34);
   border-radius: 999px;
   font-size: 11px;
   font-weight: 800;
@@ -218,7 +218,7 @@ select {
 .phone-screen {
   width: 100%;
   height: 100%;
-  background: #b8cbda;
+  background: #d8bca9;
   border-radius: 17px 17px 0 0;
 }
 
@@ -274,8 +274,8 @@ select {
   width: 28px;
   height: 28px;
   place-items: center;
-  color: #7b75ff;
-  background: #f0efff;
+  color: var(--blue);
+  background: #fff0e5;
   border-radius: 7px;
   font-size: 13px;
 }
@@ -343,7 +343,7 @@ select {
   padding: 14px;
   overflow: hidden;
   color: #fff;
-  background: #8fa4bf;
+  background: #a47f6a;
 }
 
 .wide .cover {
@@ -383,7 +383,7 @@ select {
   z-index: 2;
   padding: 4px 7px;
   color: #fff;
-  background: #2e83ff;
+  background: linear-gradient(135deg, #d76a22, var(--purple));
   border-radius: 999px;
   font-size: 9px;
   font-weight: 900;
@@ -424,13 +424,13 @@ select {
 }
 
 .cover-word {
-  background: #315a86;
+  background: #8b5a3d;
 }
 
 .cover-word::after {
   background:
-    radial-gradient(circle at 76% 30%, #e7eef8 0 26px, transparent 27px),
-    linear-gradient(130deg, #163d6f, #6f9ac8);
+    radial-gradient(circle at 76% 30%, #ffe2cf 0 26px, transparent 27px),
+    linear-gradient(130deg, #5c2d18, #d9955b);
 }
 
 .cover-beauty {
@@ -445,23 +445,23 @@ select {
 }
 
 .cover-ai {
-  background: #495e78;
+  background: #76504a;
 }
 
 .cover-ai::after {
   background:
     linear-gradient(90deg, transparent 48%, rgba(255, 255, 255, 0.18) 49%, transparent 50%),
-    linear-gradient(140deg, #172a44, #719ac1);
+    linear-gradient(140deg, #3e241d, #b2683d);
 }
 
 .cover-liberty {
-  background: #6c93ad;
+  background: #9c7b69;
 }
 
 .cover-liberty::after {
   background:
-    radial-gradient(circle at 52% 32%, #a6c5bf 0 28px, transparent 29px),
-    linear-gradient(160deg, #315675, #a9c4d2);
+    radial-gradient(circle at 52% 32%, #d4b89b 0 28px, transparent 29px),
+    linear-gradient(160deg, #6a3a20, #c7a184);
 }
 
 .cover-movie {
@@ -496,14 +496,14 @@ select {
 }
 
 .cover-japan {
-  background: #506b8e;
+  background: #7d5d52;
 }
 
 .cover-japan::after {
   background:
-    linear-gradient(0deg, #2c3d58 0 25%, transparent 26%),
+    linear-gradient(0deg, #553325 0 25%, transparent 26%),
     radial-gradient(circle at 52% 42%, #e8e1cf 0 18px, transparent 19px),
-    linear-gradient(150deg, #466b9c, #d0b58c);
+    linear-gradient(150deg, #8b5131, #d0b58c);
 }
 
 .cover-jp-talk {
@@ -613,7 +613,7 @@ select {
   gap: 3px;
   padding: 12px;
   background: #fff;
-  border: 1px solid #dce8ff;
+  border: 1px solid #f2d7c2;
   border-radius: 10px;
 }
 
@@ -658,8 +658,8 @@ select {
   width: 100%;
   min-height: 42px;
   padding: 0 10px;
-  color: #202636;
-  background: #f7f9fc;
+  color: var(--ink);
+  background: #fff8f3;
   border: 1px solid var(--line);
   border-radius: 8px;
 }
@@ -668,7 +668,7 @@ select {
   display: grid;
   gap: 8px;
   padding: 10px;
-  background: #f7f9fc;
+  background: #fff8f3;
   border-radius: 8px;
 }
 
@@ -690,8 +690,8 @@ select {
 
 .footer {
   padding: 24px 14px 34px;
-  background: #f8fafc;
-  border-top: 1px solid #edf0f5;
+  background: #fffaf6;
+  border-top: 1px solid #f0e4dc;
 }
 
 .footer-brand {
@@ -705,7 +705,7 @@ select {
 }
 
 .footer details {
-  border-top: 1px solid #e6eaf0;
+  border-top: 1px solid #f0e4dc;
 }
 
 .footer summary {
@@ -746,9 +746,9 @@ select {
   height: 36px;
   place-items: center;
   color: #fff;
-  background: #5d5bff;
+  background: var(--purple);
   border-radius: 50%;
-  box-shadow: 0 8px 18px rgba(93, 91, 255, 0.36);
+  box-shadow: 0 8px 18px rgba(177, 42, 88, 0.32);
   font-size: 19px;
   font-weight: 900;
 }
