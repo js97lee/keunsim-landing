@@ -78,14 +78,17 @@ select {
 
 .brand-symbol {
   display: block;
-  width: 17px;
-  height: 17px;
-  fill: none;
+  width: 18px;
+  height: 18px;
   flex: 0 0 auto;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2.2;
+}
+
+.cake-mark {
+  fill: currentColor;
+}
+
+.cake-window {
+  fill: #fff;
 }
 
 .header-actions {
@@ -255,11 +258,10 @@ select {
 .toast-dot svg {
   width: 15px;
   height: 15px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2.4;
+}
+
+.toast-dot .cake-window {
+  fill: var(--color-brand);
 }
 
 .toast b {
