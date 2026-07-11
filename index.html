@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="데일리피스 - 매일 카톡으로 지식 한 입" />
     <meta name="twitter:description" content="지금 나에게 가장 필요한 데일리 콘텐츠를 골라 카톡으로 받아보세요." />
     <meta name="twitter:image" content="https://daily-piece-landing.vercel.app/assets/og-daily-piece.png" />
-    <link rel="stylesheet" href="./styles.css?v=daily-piece-cake-logo-v2" />
+    <link rel="stylesheet" href="./styles.css?v=menu-carousel-functions-v1" />
   </head>
   <body>
     <div class="mobile-page">
@@ -37,9 +37,25 @@
         </a>
         <nav class="header-actions" aria-label="상단 메뉴">
           <a class="cart" href="#plans" aria-label="장바구니"></a>
-          <button class="menu" type="button" aria-label="메뉴 열기"><span></span><span></span></button>
+          <button class="menu" type="button" aria-label="메뉴 열기" aria-controls="site-menu" aria-expanded="false"><span></span><span></span></button>
         </nav>
       </header>
+
+      <aside class="drawer" id="site-menu" aria-hidden="true">
+        <div class="drawer-panel">
+          <div class="drawer-head">
+            <b>데일리피스 메뉴</b>
+            <button class="drawer-close" type="button" aria-label="메뉴 닫기">×</button>
+          </div>
+          <nav class="drawer-links" aria-label="서비스 메뉴">
+            <a href="#all">콘텐츠 둘러보기</a>
+            <a href="#how">이용방법</a>
+            <a href="#features">기능 페이지</a>
+            <a href="#plans">구독권</a>
+            <a href="#checkout">가입 및 결제</a>
+          </nav>
+        </div>
+      </aside>
 
       <main id="top">
         <section class="hero">
@@ -67,6 +83,51 @@
         <nav class="shortcut" id="shortcut" aria-label="카테고리 바로가기"></nav>
 
         <div id="content-catalog"></div>
+
+        <section class="flow-section" id="how">
+          <div class="section-head">
+            <h2>이용방법</h2>
+            <p>고르고, 가입하고, 매일 카톡으로 받기</p>
+          </div>
+          <ol class="flow-list">
+            <li><b>카테고리 선택</b><span>관심 있는 콘텐츠 구독권을 고릅니다.</span></li>
+            <li><b>카카오싱크 가입</b><span>약관 동의와 채널 추가를 한 번에 진행합니다.</span></li>
+            <li><b>발송 시간 설정</b><span>원하는 요일과 시간을 선택합니다.</span></li>
+            <li><b>샘플 즉시 발송</b><span>첫 콘텐츠를 카카오톡으로 바로 받아봅니다.</span></li>
+          </ol>
+        </section>
+
+        <section class="feature-section" id="features">
+          <div class="section-head">
+            <h2>기능 페이지</h2>
+            <p>구독자가 실제로 쓰게 될 핵심 화면</p>
+          </div>
+          <div class="feature-tabs" role="tablist" aria-label="기능 미리보기">
+            <button type="button" class="active" data-feature-tab="subscribe">구독</button>
+            <button type="button" data-feature-tab="message">카톡</button>
+            <button type="button" data-feature-tab="record">기록</button>
+          </div>
+          <div class="feature-pages">
+            <article class="feature-page active" data-feature-page="subscribe">
+              <span>01</span>
+              <h3>구독 설정</h3>
+              <p>콘텐츠, 발송 요일, 발송 시간을 한 화면에서 선택합니다.</p>
+              <div class="mock-list"><i>경제뉴스 5줄 요약</i><i>월-금 오전 8:00</i><i>첫 샘플 즉시 발송</i></div>
+            </article>
+            <article class="feature-page" data-feature-page="message">
+              <span>02</span>
+              <h3>카톡 콘텐츠</h3>
+              <p>오늘의 핵심 내용을 카드형 메시지로 받아보고 상세 페이지로 이어갑니다.</p>
+              <div class="message-preview"><b>오늘의 지식 한 조각</b><small>AI 뉴스 3개와 한 줄 해설이 도착했어요.</small></div>
+            </article>
+            <article class="feature-page" data-feature-page="record">
+              <span>03</span>
+              <h3>학습 기록</h3>
+              <p>받은 콘텐츠, 열람 기록, 퀴즈 정답률을 모아 다시 볼 수 있습니다.</p>
+              <div class="progress-preview"><strong>이번 주 5 / 7일</strong><em></em></div>
+            </article>
+          </div>
+        </section>
 
         <section class="purchase" id="plans">
           <h2>데일리피스 구독 시작하기</h2>
@@ -138,6 +199,6 @@
     </div>
 
     <a class="help" href="#checkout" aria-label="도움말">?</a>
-    <script src="./script.js?v=components-v1" defer></script>
+    <script src="./script.js?v=menu-carousel-functions-v1" defer></script>
   </body>
 </html>

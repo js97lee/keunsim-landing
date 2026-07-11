@@ -136,22 +136,78 @@ const CourseCard = (card) => `
   </article>
 `;
 
-const ContentSection = (section) => `
+const ContentSection = (section, index) => {
+  const railId = `card-rail-${section.id || index}`;
+  return `
   <section class="content-section ${section.modifier || ""}"${section.id ? ` id="${section.id}"` : ""}>
     <div class="section-head">
       <h2>${section.title}</h2>
       <p>${section.subtitle}</p>
     </div>
-    <div class="${section.layout}">
+    <div class="carousel-shell">
+      <button class="carousel-btn prev" type="button" data-rail="${railId}" data-dir="-1" aria-label="${section.title} 이전 카드">‹</button>
+      <div class="carousel ${section.layout}" id="${railId}" tabindex="0">
       ${section.cards.map(CourseCard).join("")}
+      </div>
+      <button class="carousel-btn next" type="button" data-rail="${railId}" data-dir="1" aria-label="${section.title} 다음 카드">›</button>
     </div>
   </section>
 `;
+};
 
 const renderCatalog = () => {
   document.querySelector("#content-catalog").innerHTML = sections.map(ContentSection).join("");
 };
 
+const setupCarouselControls = () => {
+  document.querySelectorAll("[data-rail]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const rail = document.getElementById(button.dataset.rail);
+      const direction = Number(button.dataset.dir);
+      const distance = Math.max(rail.clientWidth * 0.78, 180);
+      rail.scrollBy({ left: distance * direction, behavior: "smooth" });
+    });
+  });
+};
+
+const setupDrawer = () => {
+  const drawer = document.querySelector("#site-menu");
+  const menuButton = document.querySelector(".menu");
+  const closeButton = document.querySelector(".drawer-close");
+  const setOpen = (open) => {
+    drawer.classList.toggle("open", open);
+    drawer.setAttribute("aria-hidden", String(!open));
+    menuButton.setAttribute("aria-expanded", String(open));
+    document.body.classList.toggle("drawer-open", open);
+  };
+
+  menuButton.addEventListener("click", () => setOpen(true));
+  closeButton.addEventListener("click", () => setOpen(false));
+  drawer.addEventListener("click", (event) => {
+    if (event.target === drawer || event.target.closest(".drawer-links a")) {
+      setOpen(false);
+    }
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+};
+
+const setupFeatureTabs = () => {
+  const tabs = document.querySelectorAll("[data-feature-tab]");
+  const pages = document.querySelectorAll("[data-feature-page]");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const key = tab.dataset.featureTab;
+      tabs.forEach((item) => item.classList.toggle("active", item === tab));
+      pages.forEach((page) => page.classList.toggle("active", page.dataset.featurePage === key));
+    });
+  });
+};
+
 renderTopicPills();
 renderShortcuts();
 renderCatalog();
+setupCarouselControls();
+setupDrawer();
+setupFeatureTabs();
