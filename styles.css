@@ -860,6 +860,38 @@ select {
   font-size: 12px;
 }
 
+.business-info {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding: 0 0 12px;
+  color: #746256;
+  font-size: 11px;
+}
+
+.business-info div {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 8px;
+}
+
+.business-info dt,
+.business-info dd {
+  margin: 0;
+}
+
+.business-info dt {
+  color: #9b8b80;
+  font-weight: 800;
+}
+
+.business-info a {
+  display: inline;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
 .footer small {
   display: block;
   margin-top: 14px;
