@@ -1,0 +1,301 @@
+.content-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.course-card {
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 11px;
+  box-shadow: var(--shadow-sm);
+}
+
+.course-card-link {
+  display: block;
+}
+
+.course-cover {
+  position: relative;
+  display: flex;
+  aspect-ratio: 16 / 9;
+  align-items: flex-end;
+  padding: 14px;
+  overflow: hidden;
+  color: #fff;
+  background: var(--color-brand-strong);
+}
+
+.course-cover::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(20, 21, 26, 0.04), rgba(19, 25, 40, 0.86));
+  content: "";
+}
+
+.course-cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-cover strong {
+  position: relative;
+  z-index: 2;
+  max-width: 92%;
+  font-size: clamp(20px, 5vw, 26px);
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+.course-cover strong span {
+  display: block;
+}
+
+.course-cover .cover-title-light {
+  font-weight: 300;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  padding: 6px 12px;
+  color: #fff;
+  background: var(--color-brand);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.course-body {
+  padding: 13px 14px 16px;
+}
+
+.course-description {
+  margin: 0 0 8px;
+  overflow: hidden;
+  color: #1f2430;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.32;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content-pricing--compact {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.content-pricing--compact span {
+  color: var(--color-muted);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.content-pricing--compact strong {
+  color: #1f2430;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.content-pricing--compact small {
+  justify-self: end;
+  color: var(--color-brand);
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.content-detail {
+  background: var(--color-surface);
+}
+
+.detail-visual {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  margin: 0;
+  overflow: hidden;
+}
+
+.detail-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-summary,
+.detail-benefits,
+.detail-recommendations {
+  padding-right: var(--page-padding-x);
+  padding-left: var(--page-padding-x);
+}
+
+.detail-summary {
+  padding-top: 22px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.detail-eyebrow {
+  color: var(--color-brand);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.detail-summary h1 {
+  margin: 7px 0 8px;
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+.detail-summary > p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.content-pricing--detail {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.content-pricing--detail div {
+  padding: 12px;
+  background: var(--color-surface-warm);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+}
+
+.content-pricing--detail span,
+.content-pricing--detail strong {
+  display: block;
+}
+
+.content-pricing--detail span {
+  margin-bottom: 3px;
+  color: var(--color-muted);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.content-pricing--detail strong {
+  font-size: 18px;
+}
+
+.detail-benefits {
+  padding-top: 20px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.detail-benefits h2,
+.detail-recommendations h2 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+.detail-benefits ul,
+.detail-recommendations ul {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-benefits ul {
+  gap: 9px;
+}
+
+.detail-benefits li {
+  position: relative;
+  padding-left: 18px;
+  line-height: 1.5;
+}
+
+.detail-benefits li strong,
+.detail-benefits li span {
+  display: block;
+}
+
+.detail-benefits li strong {
+  margin-bottom: 2px;
+  color: var(--color-ink);
+  font-size: 13px;
+}
+
+.detail-benefits li span {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.detail-benefits li::before {
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  background: var(--color-brand);
+  border-radius: 50%;
+  content: "";
+}
+
+.detail-recommendations {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.detail-recommendations ul {
+  gap: 8px;
+}
+
+.detail-recommendations li {
+  padding: 11px 12px;
+  color: #59483f;
+  background: var(--color-surface-warm);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.subscribe-floating {
+  position: fixed;
+  bottom: 14px;
+  left: 50%;
+  z-index: 100;
+  width: min(calc(100% - (var(--page-padding-x) * 2)), calc(var(--page-width) - (var(--page-padding-x) * 2)));
+  transform: translateX(-50%);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.subscribe-floating a {
+  display: grid;
+  min-height: 48px;
+  place-items: center;
+  color: #fff;
+  background: var(--color-brand);
+  border-radius: 9px;
+  box-shadow: 0 10px 28px rgba(63, 36, 23, 0.3);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+body.drawer-open .subscribe-floating {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 10px);
+}

@@ -1,0 +1,23 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-brand);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.brand-symbol {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.cake-mark {
+  fill: currentColor;
+}
+
+.cake-window {
+  fill: #fff;
+}

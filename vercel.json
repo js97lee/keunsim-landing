@@ -1,5 +1,55 @@
 {
   "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/notices",
+      "destination": "/"
+    },
+    {
+      "source": "/FAQ",
+      "destination": "/"
+    },
+    {
+      "source": "/mypage",
+      "destination": "/"
+    },
+    {
+      "source": "/subscriptions",
+      "destination": "/"
+    },
+    {
+      "source": "/coupons",
+      "destination": "/"
+    },
+    {
+      "source": "/payments",
+      "destination": "/"
+    },
+    {
+      "source": "/account",
+      "destination": "/"
+    },
+    {
+      "source": "/gifts",
+      "destination": "/"
+    },
+    {
+      "source": "/gifts/(.*)",
+      "destination": "/"
+    },
+    {
+      "source": "/contents/(.*)",
+      "destination": "/"
+    },
+    {
+      "source": "/policies/terms",
+      "destination": "/"
+    },
+    {
+      "source": "/policies/privacy",
+      "destination": "/"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
