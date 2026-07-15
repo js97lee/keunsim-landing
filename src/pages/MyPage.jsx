@@ -37,11 +37,15 @@ export default function MyPage() {
           <br />
           동의하게 됩니다.
         </small>
-        {import.meta.env.DEV ? (
-          <button className="auth-preview-toggle" type="button" onClick={togglePreview}>
-            {isAuthenticated ? "로그아웃 상태 미리보기" : "로그인 상태 미리보기"}
+        <div className="developer-mode">
+          <span>
+            <strong>개발자 모드</strong>
+            <small>카카오 로그인 연동 전 화면 미리보기</small>
+          </span>
+          <button className={isAuthenticated ? "is-active" : ""} type="button" onClick={togglePreview}>
+            {isAuthenticated ? "로그인됨" : "로그인 보기"}
           </button>
-        ) : null}
+        </div>
       </section>
     </MobilePageShell>
   );

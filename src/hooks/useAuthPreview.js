@@ -4,12 +4,10 @@ const PREVIEW_KEY = "daily_piece_preview_member";
 const PREVIEW_EVENT = "daily-piece-auth-preview";
 
 function getPreviewState() {
-  return import.meta.env.DEV && window.localStorage.getItem(PREVIEW_KEY) === "true";
+  return window.localStorage.getItem(PREVIEW_KEY) === "true";
 }
 
 export function setAuthPreview(isAuthenticated) {
-  if (!import.meta.env.DEV) return;
-
   window.localStorage.setItem(PREVIEW_KEY, String(isAuthenticated));
   window.dispatchEvent(new CustomEvent(PREVIEW_EVENT, { detail: isAuthenticated }));
 }

@@ -206,7 +206,7 @@ export default function PurchasePage() {
           <section className="purchase-summary">
             <div>
               <span>상품 금액</span>
-              <strong>{content.totalPrice}</strong>
+              <strong>연 {content.totalPrice}</strong>
             </div>
             <div>
               <span>월 환산 금액</span>
