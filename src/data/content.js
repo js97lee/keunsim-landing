@@ -1,3 +1,7 @@
+import aiNewsImage from "../../assets/card-ai-news.png";
+import englishWordImage from "../../assets/card-english-word.png";
+import govSupportImage from "../../assets/card-gov-support.png";
+
 export const contentSections = [
   {
     id: "all",
@@ -9,7 +13,7 @@ export const contentSections = [
         title: "하루 영어 단어 3개",
         coverTitle: "하루 3개만 제대로\n영어 단어 요약",
         subtitle: "영어 단어 요약",
-        image: "/assets/card-english-word.png",
+        image: englishWordImage,
         description: "발음·뜻·예문 핵심만 전달",
         detailDescription: "외우고 잊는 단어장이 아니라, 매일 꼭 필요한 영어 단어 3개를 발음부터 예문까지 짧고 선명하게 익히는 콘텐츠입니다.",
         detailHeading: "하루 3개, 이렇게 학습해요",
@@ -28,7 +32,7 @@ export const contentSections = [
         title: "오늘의 AI 뉴스 3개",
         coverTitle: "오늘 제일 중요한\nAI 뉴스 3개 요약",
         subtitle: "AI 뉴스 요약",
-        image: "/assets/card-ai-news.png",
+        image: aiNewsImage,
         description: "핵심 이슈 + 한 줄 해설",
         detailDescription: "매일 쏟아지는 AI 소식 중 지금 알아야 할 뉴스 3개만 골라 핵심 요약과 의미, 원문 출처까지 한 번에 전해드립니다.",
         detailHeading: "AI 이슈를 이렇게 정리해요",
@@ -47,7 +51,7 @@ export const contentSections = [
         title: "정부지원사업 공고 알림",
         coverTitle: "놓치면 아까운\n정부지원사업 공고 요약",
         subtitle: "정부지원사업 알림",
-        image: "/assets/card-gov-support.png",
+        image: govSupportImage,
         description: "지원 대상·기한·요건 빠르게 확인",
         detailDescription: "흩어져 있는 정부지원사업 공고를 매일 확인해 우리 기업에 맞는 지원 대상, 마감일, 신청 요건을 빠르게 파악할 수 있게 정리합니다.",
         detailHeading: "공고에서 이것만 확인하세요",

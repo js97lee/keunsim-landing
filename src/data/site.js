@@ -1,7 +1,11 @@
+import heroBannerTwo from "../../assets/hero-banner-2.png";
+import heroBannerThree from "../../assets/hero-banner-3.png";
+import heroBannerOne from "../../assets/hero-banner.png";
+
 export const heroBanners = [
-  { src: "/assets/hero-banner.png", alt: "데일리피스 상단 배너 1" },
-  { src: "/assets/hero-banner-2.png", alt: "데일리피스 상단 배너 2" },
-  { src: "/assets/hero-banner-3.png", alt: "데일리피스 상단 배너 3" },
+  { src: heroBannerOne, alt: "데일리피스 상단 배너 1" },
+  { src: heroBannerTwo, alt: "데일리피스 상단 배너 2" },
+  { src: heroBannerThree, alt: "데일리피스 상단 배너 3" },
 ];
 
 export const flowSteps = [
